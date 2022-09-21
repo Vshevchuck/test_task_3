@@ -19,7 +19,7 @@ class MainPage extends StatelessWidget {
     return BlocProvider<SongDataBloc>(
       create: (context) => SongDataBloc(),
       child: Scaffold(
-        appBar: AppBar(backgroundColor: ColorStyle.chatAppBarColor, title: const Text('Spotify musics')),
+        appBar: AppBar(backgroundColor: ColorStyle.chatAppBarColor, title: const Text('Spotify Music')),
         body: Container(
             height: double.maxFinite,
             decoration: Decorations.backgroundMainDecoration,

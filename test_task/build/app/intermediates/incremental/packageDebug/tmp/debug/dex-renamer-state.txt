@@ -1,4 +1,0 @@
-#Wed Sep 21 18:07:50 EEST 2022
-base.0=/Users/vshevchuck/Documents/GitHub/test_task_3/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

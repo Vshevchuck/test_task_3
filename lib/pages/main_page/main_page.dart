@@ -14,8 +14,6 @@ import '../../util/decorations/decorations.dart';
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
-  static bool state = true;
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider<SongDataBloc>(
@@ -25,7 +23,7 @@ class MainPage extends StatelessWidget {
         body: Container(
             height: double.maxFinite,
             decoration: Decorations.backgroundMainDecoration,
-            child: ListOfSongsWidget()),
+            child: const ListOfSongsWidget()),
       ),
     );
   }

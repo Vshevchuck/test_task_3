@@ -11,16 +11,25 @@ class SongDataBloc extends Bloc<SongDataEvent, SongDataState> {
 
   @override
   Stream<SongDataState> mapEventToState(SongDataEvent event) async* {
-    if (event is GetSongsDataEvent) {
-      List<DataModel> data = <DataModel>[];
-      HtmlClient getAlbum = HtmlClient();
-      HtmlAlbumClient getSongs = HtmlAlbumClient();
-      List<dynamic> dataAlbum = await getAlbum.spotify();
-      for (int i = 0; i < dataAlbum.length - 2; i++) {
-        data.add(await getSongs.spotify(dataAlbum[i]));
+    if(event is SetInitialEvent)
+      {
+        yield DataEmptyState();
       }
-      yield (LoadedDataState(data, await dataAlbum[dataAlbum.length - 1],
-          await dataAlbum[dataAlbum.length - 2]));
+    if (event is GetSongsDataEvent) {
+      try {
+        List<DataModel> data = <DataModel>[];
+        HtmlClient getAlbum = HtmlClient();
+        HtmlAlbumClient getSongs = HtmlAlbumClient();
+        List<dynamic> dataAlbum = await getAlbum.spotify(event.url);
+        for (int i = 0; i < dataAlbum.length - 2; i++) {
+          data.add(await getSongs.spotify(dataAlbum[i]));
+        }
+        yield (LoadedDataState(data, await dataAlbum[dataAlbum.length - 1],
+            await dataAlbum[dataAlbum.length - 2]));
+      }
+      catch(_){
+        yield DataErrorState();
+      }
     }
   }
 }

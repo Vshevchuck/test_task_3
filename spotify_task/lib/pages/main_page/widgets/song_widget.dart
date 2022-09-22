@@ -11,7 +11,7 @@ class SongWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(7.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -19,7 +19,7 @@ class SongWidget extends StatelessWidget {
         ),
         child: ListTile(
           leading: CircleAvatar(
-            radius: 38, // Image radius
+            radius: 35, // Image radius
             backgroundImage:
             NetworkImage(dataModel.img),
           ),
@@ -29,10 +29,12 @@ class SongWidget extends StatelessWidget {
           subtitle: Row(
             children: [
               Text(
+                softWrap: true,
                 dataModel.artistName,
-                maxLines: 1,
+                maxLines: 2,
+                style: const TextStyle(fontSize: 12),
               ),
-              const SizedBox(width: 8),
+              const Spacer(),
               Text(
                 '${dataModel.duration} min',
                 style: const TextStyle(fontWeight: FontWeight.w400),
@@ -41,6 +43,6 @@ class SongWidget extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }

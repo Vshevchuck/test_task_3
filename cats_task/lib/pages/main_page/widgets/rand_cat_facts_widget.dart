@@ -63,7 +63,10 @@ class _RandCatFactsWidgetState extends State<RandCatFactsWidget> {
                           children: [
                             Text('Country ${state.data.country},'),
                             Text('Origin ${state.data.origin}'),
-                            Align(alignment:Alignment.bottomRight,child: Text(formatDate(DateTime.now(), [yyyy, '-', mm, '-', dd]))),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Text(formatDate(
+                                    DateTime.now(), [yyyy, '-', mm, '-', dd]))),
                           ],
                         ),
                       ),
@@ -89,8 +92,9 @@ class _RandCatFactsWidgetState extends State<RandCatFactsWidget> {
       }
       return Center(
           child: LoadingAnimationWidget.stretchedDots(
-            color: Colors.white,
-            size: 80,));
+        color: Colors.white,
+        size: 80,
+      ));
     });
   }
 }

@@ -26,10 +26,9 @@ class CatsFactBloc extends Bloc<CatsFactEvent, CatsFactState> {
     if (event is AddFactsToHistoryEvent) {
       history.addElementToBase(event.data);
     }
-    if(event is DeleteFactEvent)
-      {
-        history.removeElementToBase(event.index);
-      }
+    if (event is DeleteFactEvent) {
+      history.removeElementToBase(event.index);
+    }
     if (event is GetNewFactEvent) {
       bool checkImg = false;
       final facts = await getFacts();

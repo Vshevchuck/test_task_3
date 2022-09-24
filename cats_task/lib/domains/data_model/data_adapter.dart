@@ -8,7 +8,7 @@ class DataAdapter extends TypeAdapter<Data> {
 
   @override
   Data read(BinaryReader reader) {
-    final data=reader.read();
+    final data = reader.read();
     final origin = reader.read();
     final country = reader.read();
     final bread = reader.read();

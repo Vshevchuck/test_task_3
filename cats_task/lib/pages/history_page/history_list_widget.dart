@@ -62,8 +62,9 @@ class _HistoryListWidgetState extends State<HistoryListWidget> {
       }
       return Center(
           child: LoadingAnimationWidget.stretchedDots(
-          color: Colors.white,
-          size: 200,));
+        color: Colors.white,
+        size: 200,
+      ));
     });
   }
 }

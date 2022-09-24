@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../util/decorations/decorations.dart';
+import '../../util/text_styles/text_styles.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -23,9 +24,7 @@ class MainPage extends StatelessWidget {
                   Navigator.of(context).pushNamed('/history');
                 },
                 child: const Text('Fact history',
-                    style: TextStyle(
-                      color: Colors.white,
-                    )))
+                    style: TextStyles.factHistoryTextStyle))
           ],
         )),
         body: Container(

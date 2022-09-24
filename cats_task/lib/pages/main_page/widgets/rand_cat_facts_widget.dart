@@ -72,7 +72,7 @@ class _RandCatFactsWidgetState extends State<RandCatFactsWidget> {
                       ),
                       IconButton(
                           alignment: Alignment.centerRight,
-                          color: Colors.red,
+                          color: ColorStyle.heartIconColor,
                           onPressed: () {
                             setState(() {
                               catBloc.add(AddFactsToHistoryEvent(state.data));
@@ -92,7 +92,7 @@ class _RandCatFactsWidgetState extends State<RandCatFactsWidget> {
       }
       return Center(
           child: LoadingAnimationWidget.stretchedDots(
-        color: Colors.white,
+        color: ColorStyle.loadColor,
         size: 80,
       ));
     });

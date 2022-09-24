@@ -2,9 +2,9 @@ import 'package:cats_task/bloc/cats_fact_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import '../../bloc/cats_fact_bloc.dart';
-import '../../bloc/cats_fact_state.dart';
-import '../../util/colors/colors_style.dart';
+import '../../../bloc/cats_fact_bloc.dart';
+import '../../../bloc/cats_fact_state.dart';
+import '../../../util/colors/colors_style.dart';
 
 class HistoryListWidget extends StatefulWidget {
   const HistoryListWidget({Key? key}) : super(key: key);
@@ -29,16 +29,14 @@ class _HistoryListWidgetState extends State<HistoryListWidget> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: ColorStyle.cardColor,
                   ),
                   child: ListTile(
                     leading: const Icon(Icons.pets),
                     trailing: IconButton(
                         onPressed: () {
                           catBloc.add(DeleteFactEvent(index));
-                          setState(() {
-
-                          });
+                          setState(() {});
                         },
                         icon: const Icon(Icons.delete)),
                     title: Text(
@@ -62,7 +60,7 @@ class _HistoryListWidgetState extends State<HistoryListWidget> {
       }
       return Center(
           child: LoadingAnimationWidget.stretchedDots(
-        color: Colors.white,
+        color: ColorStyle.loadColor,
         size: 200,
       ));
     });

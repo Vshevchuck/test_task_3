@@ -1,5 +1,4 @@
-import 'package:cats_task/app.dart';
-import 'package:cats_task/pages/history_page/history_list_widget.dart';
+import 'package:cats_task/pages/history_page/widgets/history_list_widget.dart';
 import 'package:cats_task/util/decorations/decorations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

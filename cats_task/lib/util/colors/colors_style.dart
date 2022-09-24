@@ -5,4 +5,7 @@ abstract class ColorStyle {
   static const chatAppBarColor = Colors.indigo;
   static const mainContainerColor = Colors.white54;
   static const listTileColor = Colors.white;
+  static const loadColor = Colors.white;
+  static const cardColor = Colors.white;
+  static const heartIconColor = Colors.red;
 }

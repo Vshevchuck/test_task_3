@@ -11,7 +11,7 @@ import '../../../util/colors/colors_style.dart';
 import '../../../util/text_styles/text_styles.dart';
 
 class ListOfSongsWidget extends StatelessWidget {
-  final url;
+  final String url;
 
   const ListOfSongsWidget({Key? key, required this.url}) : super(key: key);
 
@@ -28,10 +28,10 @@ class ListOfSongsWidget extends StatelessWidget {
       }
       if (state is DataErrorState) {
         return Column(
-          children: const [
+          children:  [
             SizedBox(height: 12),
             Text(
-              'Nothing found on your link, please try again',
+              'Nothing found on your link, please try again ${url}',
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ],

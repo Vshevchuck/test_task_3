@@ -3,6 +3,7 @@ import 'package:html/parser.dart';
 
 class HtmlClient {
   Future<dynamic> spotify(String url) async {
+    print(url);
     try {
       final response = await http.Client().get(
           Uri.parse(url));

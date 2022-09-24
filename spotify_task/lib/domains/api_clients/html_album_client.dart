@@ -3,7 +3,7 @@ import 'package:html/parser.dart';
 import 'package:spotify_task/domains/data_model/data_model.dart';
 
 class HtmlAlbumClient {
-  Future<dynamic> spotify(link) async {
+  Future<dynamic> spotify(String link) async {
     try {
       final response = await http.Client().get(Uri.parse(link));
       var document = parse(response.body);
